@@ -21,30 +21,49 @@ export class UsersController {
 
   @Get('me')
   @ApiOperation({
+<<<<<<< HEAD
     summary: 'Xem hồ sơ cá nhân',
     description:
       'Dán accessToken vào Authorize để lấy profile của user hiện tại.',
   })
   @ApiResponse({ status: 200, description: 'Lấy profile thành công.' })
   @ApiResponse({ status: 401, description: 'Access token không hợp lệ.' })
+=======
+    summary: 'Xem ho so ca nhan',
+    description: 'Dan accessToken vao Authorize de lay profile user hien tai.',
+  })
+  @ApiResponse({ status: 200, description: 'Lay profile thanh cong.' })
+  @ApiResponse({ status: 401, description: 'Access token khong hop le.' })
+>>>>>>> feat/project
   getProfile(@CurrentUser() user: AuthUser) {
     return this.usersService.getProfile(user.id);
   }
 
   @Patch('me')
   @ApiOperation({
+<<<<<<< HEAD
     summary: 'Cập nhật hồ sơ cá nhân',
     description:
       'Dán accessToken vào Authorize, sau đó gửi các field profile muốn cập nhật.',
   })
   @ApiResponse({ status: 200, description: 'Cập nhật profile thành công.' })
   @ApiResponse({ status: 401, description: 'Access token không hợp lệ.' })
+=======
+    summary: 'Cap nhat ho so ca nhan',
+    description:
+      'Dan accessToken vao Authorize, sau do gui cac field profile can cap nhat.',
+  })
+  @ApiResponse({ status: 200, description: 'Cap nhat profile thanh cong.' })
+  @ApiResponse({ status: 400, description: 'Request body khong hop le.' })
+  @ApiResponse({ status: 401, description: 'Access token khong hop le.' })
+>>>>>>> feat/project
   updateProfile(@CurrentUser() user: AuthUser, @Body() dto: UpdateProfileDto) {
     return this.usersService.updateProfile(user.id, dto);
   }
 
   @Patch('me/password')
   @ApiOperation({
+<<<<<<< HEAD
     summary: 'Đổi mật khẩu',
     description:
       'Dán accessToken vào Authorize. Cần nhập currentPassword và newPassword.',
@@ -53,6 +72,17 @@ export class UsersController {
   @ApiResponse({
     status: 401,
     description: 'Access token không hợp lệ hoặc currentPassword sai.',
+=======
+    summary: 'Doi mat khau',
+    description:
+      'Dan accessToken vao Authorize. Can nhap currentPassword va newPassword.',
+  })
+  @ApiResponse({ status: 200, description: 'Doi mat khau thanh cong.' })
+  @ApiResponse({ status: 400, description: 'Request body khong hop le.' })
+  @ApiResponse({
+    status: 401,
+    description: 'Access token khong hop le hoac currentPassword sai.',
+>>>>>>> feat/project
   })
   changePassword(
     @CurrentUser() user: AuthUser,

@@ -10,7 +10,10 @@ import { mysqlConfig } from './config/database.config';
 import { mongodbConfig } from './config/mongodb.config';
 import { RedisModule } from './database/redis/redis.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { MembersModule } from './modules/members/members.module';
+import { ProjectsModule } from './modules/projects/projects.module';
 import { UsersModule } from './modules/users/users.module';
+import { WorkspacesModule } from './modules/workspaces/workspaces.module';
 
 @Module({
   imports: [
@@ -26,6 +29,9 @@ import { UsersModule } from './modules/users/users.module';
     RedisModule,
     AuthModule,
     UsersModule,
+    MembersModule,
+    ProjectsModule,
+    WorkspacesModule,
   ],
   controllers: [AppController],
   providers: [AppService],

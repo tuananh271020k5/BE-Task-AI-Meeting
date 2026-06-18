@@ -10,7 +10,11 @@ import {
 export class UpdateProfileDto {
   @ApiPropertyOptional({
     example: 'Nguyen Van A',
+<<<<<<< HEAD
     description: 'Họ tên hiển thị mới.',
+=======
+    description: 'Ho ten hien thi moi.',
+>>>>>>> feat/project
     minLength: 2,
     maxLength: 120,
   })
@@ -22,7 +26,11 @@ export class UpdateProfileDto {
 
   @ApiPropertyOptional({
     example: 'https://res.cloudinary.com/demo/image/upload/avatar.png',
+<<<<<<< HEAD
     description: 'URL ảnh đại diện. Có thể là URL Cloudinary.',
+=======
+    description: 'URL anh dai dien. Co the la URL Cloudinary.',
+>>>>>>> feat/project
     maxLength: 500,
   })
   @IsOptional()
@@ -32,7 +40,11 @@ export class UpdateProfileDto {
 
   @ApiPropertyOptional({
     example: '0900000000',
+<<<<<<< HEAD
     description: 'Số điện thoại liên hệ.',
+=======
+    description: 'So dien thoai lien he.',
+>>>>>>> feat/project
     maxLength: 30,
   })
   @IsOptional()
@@ -42,7 +54,11 @@ export class UpdateProfileDto {
 
   @ApiPropertyOptional({
     example: 'Backend Developer',
+<<<<<<< HEAD
     description: 'Chức danh hoặc vai trò cá nhân.',
+=======
+    description: 'Chuc danh hoac vai tro ca nhan.',
+>>>>>>> feat/project
     maxLength: 120,
   })
   @IsOptional()
